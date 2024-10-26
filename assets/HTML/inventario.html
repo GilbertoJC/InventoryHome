@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario de Alimentos</title>
+    <link rel="stylesheet" href="styleRegistro.css" />
+  </head>
+  <body>
+    <nav>
+      <li><a href="/Home_form/homePrueba.html">Home</a></li>
+      <li>
+        <a href="/Lista Inventario_form/InventarioGuardado.html"
+          >Compras Guardadas</a
+        >
+      </li>
+      <li>
+        <a href="/Sobre_Nosotros_form/sobreNosotros.html">Sobre Nosotros</a>
+      </li>
+      <li><a href="/Contacto_form/contacto.html">Contacto</a></li>
+      <li><a href="/Soporte/soporte.html">Soporte</a></li>
+      <li><a href="/Login_form/index_login.html">Inicio Sesion/Registro</a></li>
+    </nav>
+
+    <div class="form">
+      <h1>Lista de Alimentos</h1>
+      <form action="insertar_producto.php" method="POST">
+        <div class="espacio_input">
+          <label for="nombre">Nombre del Producto:</label>
+          <input
+            class="prueba"
+            type="text"
+            name="nombre"
+            id="nombre"
+            required
+          /><br /><br />
+
+          <label for="categoria">Categoría:</label>
+          <select name="select">
+            <option value="FrutasYverduras">Frutas y Verduras</option>
+            <option value="Lacteos" selected>Lacteos</option>
+            <option value="Granos">Granos</option>
+            <option value="AseoHogar">Aseo del AseoHogar</option>
+            <option value="AseoPersonal">Aseo Personal</option>
+            <option value="Carnes">Carnes</option>
+            >
+            <option value="?">?</option></select
+          ><br /><br />
+          <label for="tipo">Tipo:</label>
+          <input class="prueba" type="text" name="tipo" id="tipo" />
+          <br /><br />
+          <label for="marca">Marca:</label>
+          <input class="prueba" type="text" name="marca" id="marca" />
+          <br /><br />
+          <label for="cantidad">Cantidad:</label>
+          <input class="prueba" type="text" name="cantidad" id="cantidad" />
+          <br /><br />
+          <label for="fecha_expiracion">Fecha de Expiración:</label>
+          <input
+            class="prueba"
+            type="date"
+            name="fecha_expiracion"
+            id="fecha_expiracion"
+            required
+          /><br /><br />
+
+          <label for="almacen">Almacén:</label>
+          <input
+            class="prueba"
+            type="text"
+            name="almacen"
+            id="almacen"
+          /><br /><br />
+
+          <label for="fecha_ingreso">Fecha de Ingreso:</label>
+          <input
+            class="prueba"
+            type="date"
+            name="fecha_ingreso"
+            id="fecha_ingreso"
+            required
+          />
+        </div>
+        <br />
+      </form>
+    </div>
+
+    <div class="form1">
+      <form>
+        <input type="submit" value="Insertar Producto" />
+
+        <input type="submit" value="Editar Producto" />
+
+        <input type="submit" value="Eliminar Producto" />
+      </form>
+    </div>
+
+    <form
+      action="procesar_factura.php"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <br />
+      <div class="botones">
+        <label for="factura">Subir Factura Electrónica (XML):</label
+        ><br /><br />
+        <input
+          type="file"
+          name="factura"
+          id="factura"
+          accept=".xml"
+        /><br /><br />
+        <input type="submit" value="Subir Factura" />
+      </div>
+    </form>
+
+    <div class="tablaLista">
+      <h2>Lista de Alimentos</h2>
+      <table id="inventoryTable" border="1">
+        <thead>
+          <tr>
+            <th>Nombre Producto</th>
+            <th>Categoría</th>
+            <th>Tipo</th>
+            <th>Marca</th>
+            <th>Cantidad</th>
+            <th>Fecha de Expiración</th>
+            <th>Almacen</th>
+            <th>Fecha de Ingreso</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryBody">
+          <!-- Los productos se agregarán aquí -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

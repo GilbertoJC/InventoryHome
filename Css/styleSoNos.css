@@ -1,0 +1,144 @@
+body {
+    background-color: #f9f9c9; /* Color tenue */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Color del texto */
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+/* Encabezado y menú de navegación */
+nav {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fef3a1;
+    padding: 10px 0;
+    position: fixed; /* Fijar el menú en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffb752;
+    color: #000;
+}
+
+
+h1 {
+    margin-top: 5%;
+    text-align: center;
+}
+/* Imagen del logo */
+.img {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    border: 0px;
+    
+}
+
+.img img {
+    width: 400px;
+    height: 400px;
+
+
+
+}
+
+/* Encabezado principal */
+.h1 {
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* Sección principal */
+section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+section h2 {
+    color: #444;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Sección de noticias */
+aside {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    color: #444;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+aside p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed; /* Esto lo fija en la parte inferior */
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Para asegurarte que esté encima de otros elementos */
+}
